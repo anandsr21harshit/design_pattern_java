@@ -1,4 +1,4 @@
-package com.harshit.creationalDesignPattern.factoryPattern;
+package com.harshit.creational.factoryPattern;
 
 import org.springframework.stereotype.Component;
 

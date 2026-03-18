@@ -1,4 +1,4 @@
-package com.harshit.creationalDesignPattern;
+package com.harshit.creational;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

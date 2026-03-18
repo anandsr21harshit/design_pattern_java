@@ -1,4 +1,4 @@
-package com.harshit.creational.builderPattern;
+package com.harshit.creational.builder;
 
 public class Main {
 

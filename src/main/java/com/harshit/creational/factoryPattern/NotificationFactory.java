@@ -1,4 +1,4 @@
-package com.harshit.creationalDesignPattern.factoryPattern;
+package com.harshit.creational.factoryPattern;
 
 import org.springframework.stereotype.Service;
 
@@ -7,15 +7,15 @@ import java.util.Map;
 @Service
 public class NotificationFactory {
 
-    private final Map<String,Notification> notificationMap;
-    public NotificationFactory(Map<String, Notification> notificationMap) {
-        this.notificationMap = notificationMap;
-    }
+    public Notification createNotification(String channel){
+        if(channel == null || channel.isEmpty()){
+            return null;
+        }
 
-    public void send(String notifType){
-        Notification notification = notificationMap.get(notifType.toLowerCase());
-
-        if(notification == null) throw new IllegalArgumentException(notifType + " does not exist");
-        notification.sendNotification();
+        return switch (channel.toUpperCase()){
+            case "SMS" -> new SMSNotification();
+            case "EMAIL" -> new EmailNotification();
+            default -> throw new IllegalArgumentException("Unknown channel " + channel);
+        };
     }
 }
