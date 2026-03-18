@@ -1,4 +1,4 @@
-package com.harshit.creational.factoryPattern;
+package com.harshit.creational.factorypattern;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

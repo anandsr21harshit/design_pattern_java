@@ -1,4 +1,4 @@
-package com.harshit.creational.factoryPattern;
+package com.harshit.creational.factorypattern;
 
 public interface Notification {
 
